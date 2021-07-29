@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rahuldave.github.io/stories/sitemap.xml

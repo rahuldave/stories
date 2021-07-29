@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://rahuldave.github.io/stories/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/about/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/aboutunivai/</loc>
+        <lastmod>2021-07-29</lastmod>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/markdown-syntax/</loc>
+        <lastmod>2021-05-02T18:18:18+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/topics/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/topics/courses/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/topics/markdown/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/topics/sample/</loc>
+    </url>
+    <url>
+        <loc>https://rahuldave.github.io/stories/topics/univ-ai/</loc>
+    </url>
+</urlset>
