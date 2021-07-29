@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://rahuldave.github.io/stories/</loc>
+        <loc>https://stories.univ.ai/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/about/</loc>
+        <loc>https://stories.univ.ai/about/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/aboutunivai/</loc>
+        <loc>https://stories.univ.ai/aboutunivai/</loc>
         <lastmod>2021-07-29</lastmod>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/markdown-syntax/</loc>
+        <loc>https://stories.univ.ai/markdown-syntax/</loc>
         <lastmod>2021-05-02T18:18:18+00:00</lastmod>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/page/1/</loc>
+        <loc>https://stories.univ.ai/page/1/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/topics/</loc>
+        <loc>https://stories.univ.ai/topics/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/topics/courses/</loc>
+        <loc>https://stories.univ.ai/topics/courses/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/topics/markdown/</loc>
+        <loc>https://stories.univ.ai/topics/markdown/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/topics/sample/</loc>
+        <loc>https://stories.univ.ai/topics/sample/</loc>
     </url>
     <url>
-        <loc>https://rahuldave.github.io/stories/topics/univ-ai/</loc>
+        <loc>https://stories.univ.ai/topics/univ-ai/</loc>
     </url>
 </urlset>
