@@ -3,7 +3,7 @@ title = "About"
 template = "about/section.html"
 +++
 
-The idea behind https://stories.univ.ai is to provide a permalinkable spot for 
+The idea behind <https://stories.univ.ai> is to provide a permalinkable spot for 
 small tweet threads on various subjects in Data Science, Machine Learning, Statistics, and AI.
 
 My belief is that the size limitations on tweets force us to focus on whats important, and then
