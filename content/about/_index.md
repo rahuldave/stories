@@ -3,16 +3,20 @@ title = "About"
 template = "about/section.html"
 +++
 
-Tala-Zola is a minimal [Zola](https://www.getzola.org) theme helping you to
-build a light and seo-ready blog, and you can customise any information of the
-blog without having to modify the codes of the template. Tala-Zola is a port of
-the Jekyll theme [Tale](https://github.com/chesterhow/tale).
+The idea behind https://stories.univ.ai is to provide a permalinkable spot for 
+small tweet threads on various subjects in Data Science, Machine Learning, Statistics, and AI.
 
-Tale-Zola is seo-ready and it suports the open graph, Twitter cards and JSON-LD.
-All you need to do is just write an article for your blog.
+My belief is that the size limitations on tweets force us to focus on whats important, and then
+we can construct sequences of these concepts to create an explanation. The idea is that distillation
+leads to clarity.
 
-## Contribute
+In the future we intend to open up the Stories site to other teachers and researchers, and let students
+and others curate their own learning paths through these threads.
 
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/aaranxu/tale-zola).
+In the meanwhile though, we have arranged these threads by topics. Over time, we hope to be able to share
+a considerable number of interesting tweet threads with you, so that this becomes a valuable learning
+resource.
+
+You can find me at [@rahuldave](https://twitter.com/rahuldave) on twitter.
 
 Thanks for reading!
