@@ -12,6 +12,8 @@ topics = ["Univ.AI", "Tweetorials"]
 
 1. I'm playing with a system that creates tweet threads from Deckset slides, simultaneously making permalinks at <https://stories.univ.ai>.
 
+---
+
 
 
 
@@ -19,12 +21,16 @@ topics = ["Univ.AI", "Tweetorials"]
 
 2. An applescript converts the slides to images, and the slides notes become the text of the tweets. This mirrors twitter and deckset notes's lack of support for markdown.
 
+---
+
 
 
 
 ![](/decksettotweets/3.png)
 
 3. The permalink site uses Zola, with theme zola-tale. Zola is a nice blogging system in Rust.
+
+---
 
 
 
