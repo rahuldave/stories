@@ -8,28 +8,28 @@ topics = ["Univ.AI", "Courses"]
 +++
 
 
-![](/aboutunivai/1.png)
-
 1. I want to talk a bit about the company I've founded with Siddharth Das and other like minded professors. 
 We founded Univ.AI <https://univ.ai> to teach Data Science and AI in a high quality, university-like way, but at 
 much lower cost than college.
 
+![](/aboutunivai/1.png)
 
 
 
-![](/aboutunivai/2.png)
 
 2. We have 3 flagship programs, starting Sep 19th, 2021. The first is a Certificate in 
 Machine Learning and Data Science, and the second is a Certificate in Deep Learning. These 29 week programs will
 make you super stong and employable in data science and AI respectively.
 
+![](/aboutunivai/2.png)
 
 
 
-![](/aboutunivai/3.png)
 
 3. The third program combines these two together into a "Master Certificate", which trains you to become a jedi master in Data Science,
 Machine Learning, and Deep Learning. This is a longer, more intense program, taking 43 weeks. See <https://www.univ.ai/programs>!
+
+![](/aboutunivai/3.png)
 
 
 
@@ -39,9 +39,9 @@ Machine Learning, and Deep Learning. This is a longer, more intense program, tak
 
 
 
-![](/aboutunivai/5.png)
-
 5. pyDS <https://welcome.univ.ai/Foundations/PyDS/> will train you to program in python, and at the same time, teach you the concepts of mathematics and statistics that you will need to succesfully complete our programs. pyDS only costs $100.
+
+![](/aboutunivai/5.png)
 
 
 
@@ -51,9 +51,9 @@ Machine Learning, and Deep Learning. This is a longer, more intense program, tak
 
 
 
-![](/aboutunivai/7.png)
-
 7. How do we teach? LIVE, with lots of mentorship from your professors and teaching assistants. Lectures with exercises. Live labs to get hands-on practice on problems. Weekly or bi-weekly homework. A project at the end of each course. See <https://www.univ.ai/how-it-works>!
+
+![](/aboutunivai/7.png)
 
 
 
@@ -64,16 +64,16 @@ Still, you'll probably find that you will learn the most from each other!
 
 
 
-![](/aboutunivai/9.png)
-
 9. Each of these 3 programs ends with the practicum course AI5 <https://welcome.univ.ai/AcceleratedMasters/ai5-c1/>. You'll learn how to make models production-ready, and then deploy them. Thus you will have ready to use real-world operations skills the moment you graduate.
 
+![](/aboutunivai/9.png)
 
 
 
-![](/aboutunivai/10.png)
 
 10. You can also take any of our courses ala-carte (<https://www.univ.ai/courses>), after taking our entrance test or taking pyDS. Our courses and programs are reasonably priced, more expensive than Coursera, but much cheaper than university.
+
+![](/aboutunivai/10.png)
 
 
 
