@@ -9,6 +9,9 @@ build_search_index = true
 
 theme = "tale-zola"
 
+mothership_title = "Univ.AI"
+mothership_url = "https://univ.ai"
+
 title = "Stories"
 description = "Bite sized stories on Data Science and AI"
 
