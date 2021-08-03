@@ -11,8 +11,6 @@ topics = ["Statistics", "MonteCarlo"]
 1. Suppose that you toss a fair coin and catch it to see if you got heads or tails. Then you have this intuition
 that while you might get a streak of several heads in a row, in the long run the heads and tails are balanced.
 
-![](/lawoflargenumbers/1.png)
-
 
 
 
