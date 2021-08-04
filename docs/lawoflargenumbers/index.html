@@ -148,15 +148,18 @@
 that while you might get a streak of several heads in a row, in the long run the heads and tails are balanced.</p>
 </li>
 <li>
-<p>This is actually an example of a famous statistical law: the Law of Large numbers (LLN), which states that if you have
-a random variable X which has a distribution with mean µ, the average value of X over a sample of size N converges to µ as
+<p>This is actually an example of a famous law: the Law of Large numbers (LLN), which states that if you have
+a random variable X with a mean, the average value of X over a sample of size N converges i.e. gets close and closer to this mean as
 N becomes larger and larger.</p>
 </li>
 </ol>
 <p><img src="/lawoflargenumbers/2.png" alt="" /></p>
 <ol start="3">
 <li>
-<p>What does this all mean? A random variables is one that can take multiple values, each with some probability. So if X represents the flip of a coin, it will take values Heads and Tails with some probability. We'll assign Heads the value 1 and Tails the value 0.</p>
+<p>This law was first proved by Jakob Bernoulli in Ars Conjectandi, published posthumously by his nephew Niklaus Bernoulli, who appropriated entire passages of it for his treatise on law. It is the basis of much of modern frequentist statistics, including the Monte-Carlo method.</p>
+</li>
+<li>
+<p>Lets parse the law. A random variable is one that can take multiple values, each with some probability. So if X represents the flip of a coin, it will take values Heads and Tails with some probability. We'll assign Heads the value 1 and Tails the value 0.</p>
 </li>
 <li>
 <p>The probabilities attatched to the values a random variable takes is called a distribution, or probability mass function(pmf). For a fair coin, the 
@@ -164,12 +167,12 @@ N becomes larger and larger.</p>
 These probabilities must add to 1.</p>
 </li>
 </ol>
-<p><img src="/lawoflargenumbers/4.png" alt="" /></p>
-<ol start="5">
-<li>An unfair coin thats more likely to land on heads might have a distribution where 0 has attached probability 0.4 and 1 has attached probability 0.6. In this case the mean µ of the distribution is 0.4 x 0 + 0.6 x 1 = 0.6.</li>
-</ol>
 <p><img src="/lawoflargenumbers/5.png" alt="" /></p>
 <ol start="6">
+<li>An unfair coin thats more likely to land on heads might have a distribution where 0 has attached probability 0.4 and 1 has attached probability 0.6. In this case the mean µ of the distribution is 0.4 x 0 + 0.6 x 1 = 0.6.</li>
+</ol>
+<p><img src="/lawoflargenumbers/6.png" alt="" /></p>
+<ol start="7">
 <li>
 <p>This mean does not need to be
 one of the allowed values of the distribution (here 0 and 1). The mean here simply indicates whats more likely: 0.6 means that heads is more likely than tails. What is the mean in the case of the fair coin?</p>
@@ -178,33 +181,41 @@ one of the allowed values of the distribution (here 0 and 1). The mean here simp
 <p>What about a continuous random variable X, like the heights of people? In this case one defines a probability density function (pdf) p(x), the probability density that X=x (say 6 feet). The area under this curve must equal 1. Why?</p>
 </li>
 </ol>
-<p><img src="/lawoflargenumbers/7.png" alt="" /></p>
-<ol start="8">
-<li>The area of a thin rectangular sliver at X=x (yellow) with height the value of pdf p(x) represents the probability that the random variable X has value x. The sum of these areas over all possible values of X must thus be 1. The area upto X=x (pink) is called the CDF P(x).</li>
-</ol>
 <p><img src="/lawoflargenumbers/8.png" alt="" /></p>
 <ol start="9">
-<li>Now let us simulate the case of the fair coin. We'll toss a sample of N coins, or 1 coin N times, using the magic of numpy. We'll find the average of these N tosses. We'll plot this sample average against the sample size N.</li>
+<li>The area of a thin rectangular sliver at X=x (yellow) with height the value of pdf p(x) represents the probability that the random variable X has value x. The sum of these areas over all possible values of X must thus be 1. The area upto X=x (pink) is called the CDF P(x).</li>
 </ol>
 <p><img src="/lawoflargenumbers/9.png" alt="" /></p>
 <ol start="10">
-<li>We find that these sample averages are quite close to 0.5. And, as we increase the sample size N, these sample averages become super close to 0.5. Indeed, as N becomes infinite, the sample averages approach the &quot;population&quot; average µ=0.5. This is the Law of Large Numbers.</li>
+<li>Now let us simulate the case of the fair coin. We'll toss a sample of N coins, or 1 coin N times, using the magic of numpy. We'll find the average of these N tosses. This is the fraction of heads! We'll plot this sample average against the sample size N.</li>
 </ol>
 <p><img src="/lawoflargenumbers/10.png" alt="" /></p>
 <ol start="11">
+<li>We find that these sample averages are quite close to 0.5. And, as we increase the sample size N, these sample averages become super close to 0.5. Indeed, as N becomes infinite, the sample averages approach the mean µ=0.5. This is the Law of Large Numbers.</li>
+</ol>
+<p><img src="/lawoflargenumbers/11.png" alt="" /></p>
+<ol start="12">
 <li>
-<p>The LLN can be used to define the probability of a fair coin showing heads using the long run (large N) sampling frequency for heads: 0.5. But it also connects this sampling probability to one derived from symmetry: you have a fair coin with 2 sides to fall on, so 0.5 each.</p>
+<p>The LLN can be tautologically used to define the probability of a fair coin showing heads as the asymptotic (infinite N) sampling average. This is the frequentist definition of &quot;sampling probability&quot;, and the LLN conects this to the converged-to population average µ.</p>
 </li>
 <li>
-<p>This theorem, which seems super obvious, is super important. It was first proved by Jakob Bernoulli in Ars Conjectandi, part 4, published posthumously by his nephew Niklaus Bernoulli. It is the basis of much of modern frequentist statistics, including the Monte-Carlo method.</p>
-</li>
-<li>
-<p>We'll tackle fun questions like how fast the sample average converges to µ, and how you might calculate Pi using the Monte-Carlo method in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more threads!</p>
-</li>
-<li>
-<p>You can access a permalink to this thread here: <a href="https://stories.univ.ai/lawoflargenumbers/">https://stories.univ.ai/lawoflargenumbers/</a>. If you enjoy tweet threads like these and like to learn Data Science and AI, check out the courses we teach at <a href="https://stories.univ.ai/aboutunivai/">https://stories.univ.ai/aboutunivai/</a> or read this thread: LINK.</p>
+<p>But we might also treat the mean µ as an intrinsic fraction of heads, a &quot;parameter&quot; of the Bernoulli distribution. Where does it come from in the first place? The value µ can be thought of as an &quot;inferential probability&quot; derived from symmetry.</p>
 </li>
 </ol>
+<p><img src="/lawoflargenumbers/13.png" alt="" /></p>
+<ol start="14">
+<li>
+<p>If you have a coin (2 sides), and no additional information (thus fair), you would guess fraction µ=0.5 for heads. 
+The LLN then connects this &quot;inferential probability&quot; to the &quot;sampling probability&quot; (sample average) obtained by actually doing the coin-tossing experiment.</p>
+</li>
+<li>
+<p>We'll tackle the fun questions that now arise, like how fast this sampling average converges to µ, and how you might calculate Pi using the LLN in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more threads!</p>
+</li>
+<li>
+<p>A permalink to this thread is here: <a href="https://stories.univ.ai/lawoflargenumbers/">https://stories.univ.ai/lawoflargenumbers/</a>. If you enjoy threads like these and would like to learn Data Science and AI, check out the courses we teach at <a href="https://stories.univ.ai/aboutunivai/">https://stories.univ.ai/aboutunivai/</a> or read this thread: LINK.</p>
+</li>
+</ol>
+<p><img src="/lawoflargenumbers/16.png" alt="" /></p>
 
   </div>
 
@@ -220,7 +231,7 @@ one of the allowed values of the distribution (here 0 and 1). The mean here simp
 
   
   <footer>
-    <span>&copy; <time datetime="2021-08-04T13:04:15.539642-04:00">2021</time> Univ.AI. </span>
+    <span>&copy; <time datetime="2021-08-04T14:58:18.480900-04:00">2021</time> Univ.AI. </span>
   </footer>
   
 </body>
