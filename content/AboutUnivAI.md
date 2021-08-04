@@ -71,17 +71,24 @@ Still, you'll probably find that you will learn the most from each other!
 
 
 
-10. You can also take any of our courses ala-carte (<https://www.univ.ai/courses>), after taking our entrance test or taking pyDS. Our courses and programs are reasonably priced, more expensive than Coursera, but much cheaper than university.
+10. You can take our programs (<https://www.univ.ai/programs>), or our courses ala-carte (<https://www.univ.ai/courses>), after taking our entrance test or taking pyDS. Our courses and programs are reasonably priced, more expensive than Coursera, but much cheaper than university.
 
 ![](/aboutunivai/10.png)
 
 
 
 
-11. Our courses are a steal, given our great teachers, hands-on teaching model, and tons of mentorship! And, we have multiple payment options: pay as you go, income sharing agreement, or pay upfront at lower cost. See <https://www.univ.ai/tuition-options/int> for more details.
+11. For a limited time only, we are offering pyDS at $70 and AI-1 at $375, which I think are total steals. Sign up at <https://application.univ.ai/featured> and use code USQ3VO . Should you decide to take up a longer program afterwords, it's cost will also drop by the difference.
+
+![](/aboutunivai/11.png)
 
 
 
 
-12. Please feel free to contact us at hello@univ.ai or DM me (@rahuldave). You can also access a permalink to this thread here: <https://stories.univ.ai/aboutunivai/>, should you like to bookmark it.
+12. Our courses are a steal, given our great teachers, hands-on teaching model, and tons of mentorship! And, we have multiple payment options: pay as you go, income sharing agreement, or pay upfront at lower cost. See <https://www.univ.ai/tuition-options/int> for more details.
+
+
+
+
+13. Please feel free to contact us at hello@univ.ai or DM me (@rahuldave). You can also access a permalink to this thread here: <https://stories.univ.ai/aboutunivai/>, should you like to bookmark it.
 
