@@ -22,6 +22,13 @@
         <loc>https://stories.univ.ai/page/1/</loc>
     </url>
     <url>
+        <loc>https://stories.univ.ai/page/2/</loc>
+    </url>
+    <url>
+        <loc>https://stories.univ.ai/pyds/</loc>
+        <lastmod>2021-08-03</lastmod>
+    </url>
+    <url>
         <loc>https://stories.univ.ai/topics/</loc>
     </url>
     <url>
@@ -29,6 +36,9 @@
     </url>
     <url>
         <loc>https://stories.univ.ai/topics/montecarlo/</loc>
+    </url>
+    <url>
+        <loc>https://stories.univ.ai/topics/python/</loc>
     </url>
     <url>
         <loc>https://stories.univ.ai/topics/statistics/</loc>
