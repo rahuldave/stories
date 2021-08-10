@@ -36,6 +36,9 @@
         <loc>https://stories.univ.ai/topics/</loc>
     </url>
     <url>
+        <loc>https://stories.univ.ai/topics/communication/</loc>
+    </url>
+    <url>
         <loc>https://stories.univ.ai/topics/courses/</loc>
     </url>
     <url>
@@ -48,9 +51,19 @@
         <loc>https://stories.univ.ai/topics/statistics/</loc>
     </url>
     <url>
+        <loc>https://stories.univ.ai/topics/storytelling/</loc>
+    </url>
+    <url>
         <loc>https://stories.univ.ai/topics/tweetorials/</loc>
     </url>
     <url>
         <loc>https://stories.univ.ai/topics/univ-ai/</loc>
+    </url>
+    <url>
+        <loc>https://stories.univ.ai/topics/visualization/</loc>
+    </url>
+    <url>
+        <loc>https://stories.univ.ai/vizasstory/</loc>
+        <lastmod>2021-08-10</lastmod>
     </url>
 </urlset>
