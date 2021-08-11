@@ -29,7 +29,7 @@ topics = ["Univ.AI", "Courses", "Python"]
 
 
 
-4. At Univ.AI, we have carefully crafted a live and hands-on python course to make this learning easy for you. We are calling it pyDS. It starts on the 14th of August, and runs for 5 weekends. See <https://welcome.univ.ai/Foundations/PyDS/>.
+4. At Univ.AI, we have carefully crafted a live and hands-on python course to make this learning easy for you. We are calling it pyDS. It starts on the 14th of August (this Saturday!), and runs for 5 weekends. See <https://welcome.univ.ai/Foundations/PyDS/>.
 
 ![](/pyds/4.png)
 
@@ -43,7 +43,7 @@ topics = ["Univ.AI", "Courses", "Python"]
 
 
 
-6. The course will be delivered by a crack team of practitioners, from the Stellar DNN research group led by @pprotopapas . You can find out more about them and the course at <https://welcome.univ.ai/Foundations/PyDS/>
+6. The course will be delivered by a crack team of practitioners, from the Stellar DNN research group. You can find out more about them and the course at <https://welcome.univ.ai/Foundations/PyDS/>
 
 ![](/pyds/6.png)
 
@@ -62,7 +62,7 @@ topics = ["Univ.AI", "Courses", "Python"]
 
 
 
-9. pyDS is a prerequisite (or you can take a test) for our other courses and programs. It is great preparation for self-study and other courses in AI as well! You can learn more at <https://stories.univ.ai/aboutunivai/> or read this thread: LINK.
+9. pyDS is a prerequisite (or you can take a test) for our other courses and programs. It is great preparation for self-study and other courses in AI as well! You can learn more at <https://stories.univ.ai/aboutfoundingunivai/>.
 
 ![](/pyds/9.png)
 
