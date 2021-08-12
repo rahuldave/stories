@@ -81,7 +81,7 @@ one of the allowed values of the distribution (here 0 and 1). The mean here simp
 
 
 
-12. If you have a coin (2 sides, 2 possibilities), and no additional information about the coin and toss phsics (thus fair), you would guess fraction µ=0.5 for heads. 
+12. If you have a coin (2 sides, 2 possibilities), and no additional information about the coin and toss physics (thus fair), you would guess fraction µ=0.5 for heads. 
 The LLN then says that sampling probabilities converge to this "inferential probability".
 
 
@@ -92,7 +92,7 @@ The LLN then says that sampling probabilities converge to this "inferential prob
 
 
 
-14. A permalink to this thread is here: <https://stories.univ.ai/lawoflargenumbers/>. And if you enjoy threads like these and would like to learn Data Science and AI, check out the courses we teach at <https://univ.ai/programs/> and <https://univ.ai/courses/>.
+14. A permalink to this thread is here: <https://stories.univ.ai/lawoflargenumbers/>. And if you would like to learn Data Science and AI, check out our programs at <https://univ.ai/programs/>, and the thread <https://twitter.com/rahuldave/status/1424793241019428864> (discounts inside).
 
 ![](/lawoflargenumbers/14.png)
 
