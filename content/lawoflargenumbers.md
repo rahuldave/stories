@@ -1,7 +1,7 @@
 +++
 title = "The LLN"
 description = "Probably the most important theorem in frequentist statistics"
-date = 2021-08-02
+date = 2021-08-12
 
 [taxonomies]
 topics = ["Statistics", "MonteCarlo"]
@@ -23,7 +23,7 @@ N becomes larger and larger.
 
 
 
-3. This law was first proved by Jakob Bernoulli in Ars Conjectandi, published posthumously by his nephew Niklaus Bernoulli, who appropriated entire passages of it for his treatise on law. It is the basis of much of modern frequentist statistics, including the Monte-Carlo method.
+3. The LLN was first proved by Jakob Bernoulli in Ars Conjectandi, published posthumously by his nephew Niklaus Bernoulli, who appropriated entire passages of it for his treatise on law. It is the basis of much of modern statistics, including the Monte-Carlo method.
 
 
 
@@ -33,7 +33,7 @@ N becomes larger and larger.
 
 
 
-5. The probabilities attatched to the values a random variable takes is called a distribution, or probability mass function(pmf). For a fair coin, the 
+5. The probabilities attatched to the values a random variable takes is called a distribution, or probability mass function (pmf). For a fair coin, the 
 "Bernoulli" Distribution attaches the probabilities 0.5 to value 1 and 0.5 to value 0. 
 These probabilities must add to 1.
 
@@ -55,58 +55,44 @@ one of the allowed values of the distribution (here 0 and 1). The mean here simp
 
 
 
-8. What about a continuous random variable X, like the heights of people? In this case one defines a probability density function (pdf) p(x), the probability density that X=x (say 6 feet). The area under this curve must equal 1. Why?
+8. Now let us simulate the case of the fair coin. We'll toss a sample of N coins, or 1 coin N times, using the magic of numpy. We'll find the average of these N tosses. This is the fraction of heads! We'll plot this sample average against the sample size N.
 
 ![](/lawoflargenumbers/8.png)
 
 
 
 
-9. The area of a thin rectangular sliver at X=x (yellow) with height the value of pdf p(x) represents the probability that the random variable X has value x. The sum of these areas over all possible values of X must thus be 1. The area upto X=x (pink) is called the CDF P(x).
+9. We find that these sample averages are quite close to 0.5. And, as we increase the sample size N, these sample averages become super close to 0.5. Indeed, as N becomes infinite, the sample averages approach the mean µ=0.5. This is the Law of Large Numbers.
 
 ![](/lawoflargenumbers/9.png)
 
 
 
 
-10. Now let us simulate the case of the fair coin. We'll toss a sample of N coins, or 1 coin N times, using the magic of numpy. We'll find the average of these N tosses. This is the fraction of heads! We'll plot this sample average against the sample size N.
-
-![](/lawoflargenumbers/10.png)
+10. The LLN can be tautologically used to define the probability of a fair coin showing heads as the asymptotic (infinite N) sampling average. This is the frequentist definition of "sampling probability", the population frequency µ.
 
 
 
 
-11. We find that these sample averages are quite close to 0.5. And, as we increase the sample size N, these sample averages become super close to 0.5. Indeed, as N becomes infinite, the sample averages approach the mean µ=0.5. This is the Law of Large Numbers.
+11. But we might also treat the mean µ as an intrinsic fraction of heads, a "parameter" of the Bernoulli distribution. Where does it come from in the first place? The value µ can be thought of as an "inferential probability" derived from symmetry and lack of knowledge.
 
 ![](/lawoflargenumbers/11.png)
 
 
 
 
-12. The LLN can be tautologically used to define the probability of a fair coin showing heads as the asymptotic (infinite N) sampling average. This is the frequentist definition of "sampling probability", and the LLN conects this to the converged-to population average µ.
+12. If you have a coin (2 sides, 2 possibilities), and no additional information about the coin and toss phsics (thus fair), you would guess fraction µ=0.5 for heads. 
+The LLN then says that sampling probabilities converge to this "inferential probability".
 
 
 
 
-13. But we might also treat the mean µ as an intrinsic fraction of heads, a "parameter" of the Bernoulli distribution. Where does it come from in the first place? The value µ can be thought of as an "inferential probability" derived from symmetry.
-
-![](/lawoflargenumbers/13.png)
+13. We'll tackle fun questions that now arise, like how fast this sampling average converges to µ, how to calculate pi, and how the LLN enables random forests in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more!
 
 
 
 
-14. If you have a coin (2 sides), and no additional information (thus fair), you would guess fraction µ=0.5 for heads. 
-The LLN then connects this "inferential probability" to the "sampling probability" (sample average) obtained by actually doing the coin-tossing experiment.
+14. A permalink to this thread is here: <https://stories.univ.ai/lawoflargenumbers/>. And if you enjoy threads like these and would like to learn Data Science and AI, check out the courses we teach at <https://univ.ai/programs/> and <https://univ.ai/courses/>.
 
-
-
-
-15. We'll tackle the fun questions that now arise, like how fast this sampling average converges to µ, and how you might calculate Pi using the LLN in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more threads!
-
-
-
-
-16. A permalink to this thread is here: <https://stories.univ.ai/lawoflargenumbers/>. If you enjoy threads like these and would like to learn Data Science and AI, check out the courses we teach at <https://stories.univ.ai/aboutunivai/> or read this thread: LINK.
-
-![](/lawoflargenumbers/16.png)
+![](/lawoflargenumbers/14.png)
 
