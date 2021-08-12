@@ -1,7 +1,7 @@
 +++
 title = "About pyDS"
 description = "pyDS is Univ.Ai's python course. It also prepares you with the requisite math and stats for data science and AI"
-date = 2021-08-03
+date = 2021-08-11
 
 [taxonomies]
 topics = ["Univ.AI", "Courses", "Python"]
