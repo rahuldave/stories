@@ -92,7 +92,7 @@ The LLN then says that sampling probabilities converge to this "inferential prob
 
 
 
-14. A permalink to this thread is here: <https://stories.univ.ai/lawoflargenumbers/>. And if you would like to learn Data Science and AI, check out our programs at <https://univ.ai/programs/>, and the thread <https://twitter.com/rahuldave/status/1424793241019428864> (discounts inside).
+14. Permalink to thread here: <https://stories.univ.ai/lawoflargenumbers/>! And if you would like to learn Data Science and AI, check out our programs at <https://univ.ai/programs/>, and the thread <https://twitter.com/rahuldave/status/1424793241019428864> (discounts inside).
 
 ![](/lawoflargenumbers/14.png)
 
