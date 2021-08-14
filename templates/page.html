@@ -61,8 +61,7 @@
 
   {% if page.extra.twitterurl -%}
   <hr/>
-  https://publish.twitter.com/oembed?
-  url={{ page.extra.twitterurl | safe }}&cards=hidden
+  <a href="https://publish.twitter.com/oembed?url={{ page.extra.twitterurl | safe }}&cards=hidden"></a>
   {%- endif %}
 
 	{% include "partials/disqus.html" %}
