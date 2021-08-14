@@ -59,6 +59,12 @@
   	{{ page.content | safe }}
   </div>
 
+  <hr/>
+  {% if page.extra.twitterurl -%}
+  https://publish.twitter.com/oembed?
+  url={{ page.extra.twitterurl }}&cards=hidden
+  {%- endif %}
+
 	{% include "partials/disqus.html" %}
 
   <div class="pagination">
