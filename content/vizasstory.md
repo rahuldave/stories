@@ -2,6 +2,8 @@
 title = "Visualization As Story"
 description = "How should you communicate your insights in Visualization?"
 date = 2021-08-10
+
+[extra]
 twitterurl = "https://twitter.com/rahuldave/status/1425200284301725708"
 
 [taxonomies]
