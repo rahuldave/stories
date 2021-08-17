@@ -168,7 +168,7 @@
   	<h1 class="post-title">Keeping Visualizations Simple with Matplotlib</h1>
   	<div class="post-line"></div>
   	<ol>
-<li>In the thread <a href="https://twitter.com/rahuldave/status/1425200284301725708">https://twitter.com/rahuldave/status/1425200284301725708</a>, I talked about the visualization in this image (from the financial times <a href="https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1">https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1</a>). How might we produce such visualizations.</li>
+<li>In the thread <a href="https://twitter.com/rahuldave/status/1425200284301725708">https://twitter.com/rahuldave/status/1425200284301725708</a>, I talked about the visualization in this image (from the financial times <a href="https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1">https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1</a>). How might we produce such visualizations?</li>
 </ol>
 <p><img src="/improvingfigures/1.png" alt="" /></p>
 <ol start="2">
@@ -181,15 +181,15 @@
 </ol>
 <p><img src="/improvingfigures/3.png" alt="" /></p>
 <ol start="4">
-<li>As @EdwardTufte who coined has persuasively argued in his books, extraneous visual elements that distract from the message should be removed. For example: tick-marks,frames, sometimes even numbers! Lets us carry this process using matplotlib for a simple example..</li>
+<li>As @EdwardTufte has persuasively argued in his books, extraneous visual elements that distract from the message should be removed. For example: tick-marks, frames, sometimes even numbers! Lets us implement this process using matplotlib for a simple example...</li>
 </ol>
 <p><img src="/improvingfigures/4.png" alt="" /></p>
 <ol start="5">
-<li>Here is a dataset on electoral votes and population in all the US states. We'll make a bar chart comparing the electoral votes of different states. You can find the data and the analysis notebook for this thread HERE.</li>
+<li>Here is a dataset on electoral votes and population in all the US states. We'll make a bar chart comparing the electoral votes of different states. You can find the data and the analysis notebook for this thread <a href="https://gist.github.com/rahuldave/2256465a8524453cb2a4630d336f82f7">https://gist.github.com/rahuldave/2256465a8524453cb2a4630d336f82f7</a>.</li>
 </ol>
 <p><img src="/improvingfigures/5.png" alt="" /></p>
 <ol start="6">
-<li>This first snippet illustrates Matplotlib's object-oriented API. We first create a figure object, and in the context of that object, an axes object. Then pandas is used to place a bar plot into those axes. What's not so good about this image?</li>
+<li>This first snippet illustrates Matplotlib's object-oriented API. We first create a figure object, and in the context of that object, an axes object. Then pandas is used to place a bar plot into those axes. What's <strong>not good</strong>about this plot?</li>
 </ol>
 <p><img src="/improvingfigures/6.png" alt="" /></p>
 <ol start="7">
@@ -197,23 +197,23 @@
 </ol>
 <p><img src="/improvingfigures/7.png" alt="" /></p>
 <ol start="8">
-<li>How can we improve the previous image? Do we really need y-axis ticks with state names labeling them? How about we remove these ticks? We do this in matplotlib by setting their length to 0.</li>
+<li>How can we improve our plot? Do we really need y-axis tick marks with state names labeling them? How about we remove these tick-marks? We do this in matplotlib by setting their length to 0. Note that we are not removing the ticks, but just the marks corresponding to them.</li>
 </ol>
 <p><img src="/improvingfigures/8.png" alt="" /></p>
 <ol start="9">
-<li>Do we really need ticks on the x-axis? Why not just put the labels? And move these to the top because the longest bars are there. And then replacing the tick marks with a grid helps us see the values on each and every bar!</li>
+<li>Do we really need tick-marks on the x-axis? Why not just write the labels? And move these labels to the top where they are needed more, since the longest bars are there. Finally using a grid at the ticks helps us see the values on each and every bar!</li>
 </ol>
 <p><img src="/improvingfigures/9.png" alt="" /></p>
 <ol start="10">
-<li>Do the spines add anything to our presentation? No. The elements of the figure are strong enough to stand by themselves. Ok, so lets remove the spines...</li>
+<li>Do the spines add anything to our presentation? No! The elements of the figure are strong enough to stand by themselves. Ok, so lets remove the spines...</li>
 </ol>
 <p><img src="/improvingfigures/10.png" alt="" /></p>
 <ol start="11">
-<li>If you want to show more precise distinctions between the states' electoral votes, you want the grid (or tick marks if you were using those) to be more fine grained. So lets have a tick every 5 votes, which translates in our grid visual to a grid line every 5 votes.</li>
+<li>If you want to show more precise distinctions between the states' electoral votes, you want the grid to be more fine grained. So lets have a tick every 5 votes, which translates in our grid visual to a grid line every 5 votes.</li>
 </ol>
 <p><img src="/improvingfigures/11.png" alt="" /></p>
 <ol start="12">
-<li>The tick-mark/grid-line labels look entirely redundant. After all, we can count off the grid-lines. So lets get rid of them, eliminate the clutter. And then, why not show the user the electoral votes for each state? Dont make the user think!</li>
+<li>The grid line labels look entirely redundant. After all, we can count off the grid-lines. So lets get rid of them, and eliminate the clutter. And then, why not show the user the electoral votes for each state at the end of its bar? Dont make the user think!</li>
 </ol>
 <p><img src="/improvingfigures/12.png" alt="" /></p>
 <ol start="13">
@@ -221,15 +221,15 @@
 </ol>
 <p><img src="/improvingfigures/13.png" alt="" /></p>
 <ol start="14">
-<li>Maybe you want to see this image in your slides or website based on the color scheme you like, rather than having a white background. Then you can <code>savefig</code> the figure as a transparent png. There are multiple other save options as well.</li>
+<li>Maybe you want to see this image in your slides or website based on the color scheme of your slides or site respectively, rather than having a white background. Then you can <code>savefig</code> the figure as a transparent png. There are multiple other save options as well.</li>
 </ol>
 <p><img src="/improvingfigures/14.png" alt="" /></p>
 <ol start="15">
 <li>
-<p>An incredible source to learn the ins and outs of @matplotlib is <a href="https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/">https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/</a> by @<em>brohrer</em> . I teach this stuff as well, as part of the Data Science courses at Univ.Ai.</p>
+<p>An incredible source to learn the ins and outs of @matplotlib is <a href="https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/">https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/</a> by @<em>brohrer</em> . I teach this stuff as well, as part of the Data Science courses at &lt;Univ.Ai&gt;.</p>
 </li>
 <li>
-<p>This story is permalinked at <a href="https://stories.univ.ai/improvingfigures/">https://stories.univ.ai/improvingfigures/</a>. I'll soon be tweeting on re-producing the @FT vaccination plot I mentioned earlier. Follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more!</p>
+<p>This story is permalinked at <a href="https://stories.univ.ai/improvingfigures/">https://stories.univ.ai/improvingfigures/</a>. I'll soon be tweeting on re-producing the @FT vaccination plot mentioned earlier. So do follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more!</p>
 </li>
 </ol>
 
@@ -249,7 +249,7 @@
 
   
   <footer>
-    <span>&copy; <time datetime="2021-08-17T23:19:51.123623+05:30">2021</time> Univ.AI. </span>
+    <span>&copy; <time datetime="2021-08-18T00:21:23.382936+05:30">2021</time> Univ.AI. </span>
   </footer>
   
 </body>
