@@ -8,7 +8,7 @@ topics = ["Statistics", "Probability"]
 +++
 
 
-1. Last week I did a thread on the law of large numbers (LLN): <https://twitter.com/rahuldave/status/1425883481821704192>. The essence was that the mean of N random variables drawn from a distribution converge to the mean µ of the distribution as N becomes infinite.
+1. Last week I did a thread on the law of large numbers (LLN): <https://twitter.com/rahuldave/status/1425883481821704192> or <https://stories.univ.ai/lawoflargenumbers/>. The essence was that the mean of N random variables drawn from a distribution converge to the mean µ of the distribution as N becomes infinite.
 
 ![](/distributions/1.png)
 
@@ -81,7 +81,7 @@ topics = ["Statistics", "Probability"]
 
 
 
-12. The area upto X=x (pink) is called the Cumulative Distribution Function (CDF) P(x). It is the probability that the random variable X has value less than or equal to x. P(x) must always between 0 and 1. For calculus lovers, he integral of the pdf upto x is the CDF.
+12. The area upto X=x (pink) is called the Cumulative Distribution Function (CDF) P(x). It is the probability that the random variable X has value less than or equal to x. P(x) must always between 0 and 1. For calculus lovers, the integral of the pdf upto x is the CDF.
 
 ![](/distributions/12.png)
 
@@ -95,7 +95,7 @@ topics = ["Statistics", "Probability"]
 
 
 
-14. The CDF can be defined for discrete probability distributions as well. There we simply add the probability upto x, rather than having to compute the area.
+14. The CDF can be defined for discrete probability distributions as well. There we simply add the probability upto and including x, rather than having to compute the area.
 
 ![](/distributions/14.png)
 
@@ -107,7 +107,7 @@ topics = ["Statistics", "Probability"]
 
 
 
-16. Permalink to thread here: <https://stories.univ.ai/distributions/>! And if you would like to learn Data Science and AI, check out our programs at <https://univ.ai/programs/>, and the thread <https://twitter.com/rahuldave/status/1424793241019428864> (discounts inside).
+16. Permalink to thread here: <https://stories.univ.ai/distributions/>! If you'd like to learn Data Science and AI, you might want to check out our programs at <https://univ.ai/programs/>, and the thread <https://twitter.com/rahuldave/status/1424793241019428864> (discounts inside).
 
 ![](/distributions/16.png)
 
