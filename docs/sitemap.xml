@@ -19,6 +19,10 @@
         <lastmod>2021-08-01</lastmod>
     </url>
     <url>
+        <loc>https://stories.univ.ai/distributions/</loc>
+        <lastmod>2021-08-19</lastmod>
+    </url>
+    <url>
         <loc>https://stories.univ.ai/improvingfigures/</loc>
         <lastmod>2021-08-17</lastmod>
     </url>
@@ -50,6 +54,9 @@
     </url>
     <url>
         <loc>https://stories.univ.ai/topics/montecarlo/</loc>
+    </url>
+    <url>
+        <loc>https://stories.univ.ai/topics/probability/</loc>
     </url>
     <url>
         <loc>https://stories.univ.ai/topics/python/</loc>
