@@ -9,7 +9,7 @@ topics = ["Visualization"]
 +++
 
 
-1.  Two weeks back, in the thread <https://twitter.com/rahuldave/status/1425200284301725708>, I talked about the visualization in this image (from the financial times (@FT) <https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1>). Here I tackle the production of such an image in @matplotlib .
+1.  Two weeks back, in the thread <https://twitter.com/rahuldave/status/1425200284301725708>, I talked about the visualization in this image from the financial times (@FT) <https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1> . Here I tackle the production of such an image in @matplotlib .
 
 ![](/makingthecovidviz/1.png)
 
@@ -21,7 +21,7 @@ topics = ["Visualization"]
 
 
 
-3.  I used a data extraction tool, Engauge Digitizer, to get the data points out from the @FT graph. And the built-in MAc utility, Digital Color Meter, to figure some of the colors used there The data and the notebook used to produce this thread are available at LINK.
+3.  I used Engauge Digitizer, to extract the data points from the @FT graph. And the built-in OSX utility, Digital Color Meter, to figure the colors used there. The data and the notebook used to produce this thread are available at <https://gist.github.com/rahuldave/df75d3aa73e95e8361b7cdd1663c9868>.
 
 
 
@@ -61,7 +61,7 @@ topics = ["Visualization"]
 
 
 
-9. By using patches I have now added am arrow for each age in our dataset! I also add a formatted title. We are getting closer to the final image. I need to annotate the plot and make it have the right color!
+9. By using patches I have now added an arrow for each age in our dataset! I also add a formatted title. We are getting closer to the final image. I need to annotate the plot and make it have the right color!
 
 ![](/makingthecovidviz/9.png)
 
@@ -75,7 +75,7 @@ topics = ["Visualization"]
 
 
 
-11. I'll tackle more visualization stuff in future tweet threads, including the principles of good visualizations and how to achieve them with @matplotlib . Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more!
+11. I'll tackle more visualization stuff in future tweet threads, including the principles of good visualization and how to achieve them with @matplotlib . Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more!
 
 
 
