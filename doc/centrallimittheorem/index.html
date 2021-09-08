@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>The CLT | Stories</title>
+
+
+
+<meta property="og:title" content="The CLT">
+
+
+
+<meta name="author" content="Rahul Dave">
+
+
+<meta property="og:locale" content="en-US">
+
+
+<meta name="description" content="Probably the 2nd most important theorem in frequentist statistics">
+<meta property="og:description" content="Probably the 2nd most important theorem in frequentist statistics">
+
+
+
+<link rel="canonical" href="https://stories.univ.ai/centrallimittheorem/">
+<meta property="og:url" content="https://stories.univ.ai/centrallimittheorem/">
+
+
+
+<meta property="og:site_name" content="Stories" />
+
+
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-09-08T00:00:00+00:00">
+
+
+
+  <link rel="prev" href="https://stories.univ.ai/makingthecovidviz/">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+
+
+
+  <meta property="twitter:title" content="The CLT">
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Person",
+	  "name":"Rahul Dave",
+  },
+  "description": "Probably the 2nd most important theorem in frequentist statistics",
+  "url": "https://stories.univ.ai/centrallimittheorem/",
+  "@context":"https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The CLT"
+  
+    
+    
+      "datePublished":"2021-09-08T00:00:00+00:00",
+    
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://stories.univ.ai/centrallimittheorem/"
+    },
+  
+}
+</script>
+
+  <link rel="stylesheet" href="https://stories.univ.ai/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://stories.univ.ai/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://stories.univ.ai/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://stories.univ.ai/assets/apple-touch-icon.png">
+
+  
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HM30F33395"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HM30F33395');
+</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  
+  
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+	integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+	integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+	integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+	onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+
+      <!--a href="https://univ.ai">
+            <h2 class="nav-title" style="color: #324bd9">Univ.AI</h2>
+      </a-->
+      <a href="https://stories.univ.ai">
+        <h2 class="nav-title">Stories</h2>
+      </a>
+      <!--span>&nbsp;from&nbsp;</span>
+      <a style="color: #324bd9" href="https://univ.ai">Univ.AI</a-->
+      <ul>
+        
+          
+            <li><a href="https://stories.univ.ai/topics">Topics</a></li>
+          
+            <li><a href="https://stories.univ.ai/about">About</a></li>
+          
+          <li><a style="color: #324bd9" href="https://univ.ai">Univ.AI</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		<span>Written by</span> Rahul Dave
+  		<span>on&nbsp;</span><time datetime="2021-09-08">September  8, 2021</time>
+  	</div>
+  	<h1 class="post-title">The CLT</h1>
+  	<div class="post-line"></div>
+  	<ol>
+<li>Suppose that you lived in a town with a population whose weights had a mean of 180 and a standard deviation of 9. 
+Now, some people in this town underwent a weight reduction program, and you want to know if it had a significant effect. Did the &quot;intervention&quot; work?</li>
+</ol>
+<p><img src="/centrallimittheorem/1.png" alt="" /></p>
+<ol start="2">
+<li>You should ask: what is the size of the sample that underwent the intervention? To understand why, let us
+go back to the tosses of a fair coin that we talked about here: <a href="https://twitter.com/rahuldave/status/1425883481821704192">https://twitter.com/rahuldave/status/1425883481821704192</a>.</li>
+</ol>
+<p><img src="/centrallimittheorem/2.png" alt="" /></p>
+<ol start="3">
+<li>
+<p>There, we increased the size of the sample of coins being tossed, and the fraction of heads, or the average of heads(1) and tails(0) got closer to 0.5 as the size N increased. We'd asked how fast does this fraction converge to 0.5?</p>
+</li>
+<li>
+<p>This question is answered by the Central Limit Theorem (CLT), which, as it turns out, can also be used to answer the question about
+the significance of the intervention! The CLT starts by recognizing that different samples of the same size N will have slightly different means.</p>
+</li>
+<li>
+<p>The CLT says that these &quot;sample means&quot; follow a Normal Distribution whose standard
+deviation decreases with increasing N. This standard deviation of sample means is called the <strong>standard error</strong>, and it is smaller than the underlying standard deviation σ of coin tosses.</p>
+</li>
+</ol>
+<p><img src="/centrallimittheorem/5.png" alt="" /></p>
+<ol start="6">
+<li>For example, if I take 1000 samples of size 500 each, the 100 means of the coin tosses distribute themselves according to the figure on the left. If I increase the size to 1000 tosses in a sample, we get the tighter distribution on the right.</li>
+</ol>
+<p><img src="/centrallimittheorem/6.png" alt="" /></p>
+<ol start="7">
+<li>
+<p>I talked about distributions in a previous thread: <a href="https://twitter.com/rahuldave/status/1428458696481247233">https://twitter.com/rahuldave/status/1428458696481247233</a>. That thread describes the terms we use when we talk about distributions. Here, we are talking about the Gaussian or the Normal Distribution, which occurs everywhere in nature.</p>
+</li>
+<li>
+<p>The Normal distribution N(µ, s) is symmetric about its mean µ, and 95% of the area of the distribution is between µ - 2s and µ + 2s. Lower s means smaller width; and the distribution becomes taller to compensate (keep the area at 1).</p>
+</li>
+</ol>
+<p><img src="/centrallimittheorem/8.png" alt="" /></p>
+<ol start="9">
+<li>As we increase the sample size N, the distributions of sample means tighten (left image). You can see more blue dots closer in to the 0.5 value as N increases to 1000. We plot the mean µ of these sample means in the figure on the right. µ gets closer to 0.5 too.</li>
+</ol>
+<p><img src="/centrallimittheorem/9.png" alt="" /></p>
+<ol start="10">
+<li>Now let us compute the standard error (standard deviation of sample means from µ), at any N. The CLT tells us that this width s decreases with N as 1/√N. We can now use this formula to answer the question about the weight reduction intervention.</li>
+</ol>
+<p><img src="/centrallimittheorem/10.png" alt="" /></p>
+<ol start="11">
+<li>
+<p>The population's weights have a mean of 180 and a standard deviation of 9. Say you have a sample of 100 people in your intervention program. Then s = 9/√100 = 9/10 = 0.9. A set of samples of size 100 would have a mean of sample means of 180 and a standard error of 0.9. Tight!</p>
+</li>
+<li>
+<p>Now, if your intervention sample of size 100 had a mean weight of 175, that number is 5 standard errors from the population mean, and thus very unlikely to have come from a sample drawn from the population. What if you had chosen a sample of 9 people instead?</p>
+</li>
+</ol>
+<p><img src="/centrallimittheorem/12.png" alt="" /></p>
+<ol start="13">
+<li>Then s = 9/√9 = 9/3 = 3. Now, if your intervention sample of size 9 had a mean weight of 175, this is less than 2 standard errors out from the population mean, and you cannot claim with a sample size of 9 that your intervention sample actually had a significant effect.</li>
+</ol>
+<p><img src="/centrallimittheorem/13.png" alt="" /></p>
+<ol start="14">
+<li>
+<p>Thus the CLT tells us the sample sizes we need to see significant effects! We'll talk more fun stuff, estimating Pi and its error with the LLN and CLT in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more threads!</p>
+</li>
+<li>
+<p>You can access a permalink to this thread here: <a href="https://stories.univ.ai/centrallimittheorem/">https://stories.univ.ai/centrallimittheorem/</a>. If you enjoy tweet threads like these and like to learn Data Science and AI, check out the courses we teach at <a href="https://stories.univ.ai/aboutunivai/">https://stories.univ.ai/aboutunivai/</a> or read this thread: LINK.</p>
+</li>
+</ol>
+
+  </div>
+
+  
+
+	
+
+  <div class="pagination">
+  	
+		<a href="#" class="top">Top</a>
+		<a href="https://stories.univ.ai/makingthecovidviz/" class="right arrow">&#8594;</a>
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2021-09-08T13:56:52.890474-04:00">2021</time> Univ.AI. </span>
+  </footer>
+  
+</body>
+</html>

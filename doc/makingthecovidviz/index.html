@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>Making the @FT Covid Vaccine Visualization | Stories</title>
+
+
+
+<meta property="og:title" content="Making the @FT Covid Vaccine Visualization">
+
+
+
+<meta name="author" content="Rahul Dave">
+
+
+<meta property="og:locale" content="en-US">
+
+
+<meta name="description" content="Using matplotlib to make a production quality viz">
+<meta property="og:description" content="Using matplotlib to make a production quality viz">
+
+
+
+<link rel="canonical" href="https://stories.univ.ai/makingthecovidviz/">
+<meta property="og:url" content="https://stories.univ.ai/makingthecovidviz/">
+
+
+
+<meta property="og:site_name" content="Stories" />
+
+
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-09-02T00:00:00+00:00">
+
+
+
+  <link rel="prev" href="https://stories.univ.ai/distributions/">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+
+
+
+  <meta property="twitter:title" content="Making the @FT Covid Vaccine Visualization">
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Person",
+	  "name":"Rahul Dave",
+  },
+  "description": "Using matplotlib to make a production quality viz",
+  "url": "https://stories.univ.ai/makingthecovidviz/",
+  "@context":"https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Making the @FT Covid Vaccine Visualization"
+  
+    
+    
+      "datePublished":"2021-09-02T00:00:00+00:00",
+    
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://stories.univ.ai/makingthecovidviz/"
+    },
+  
+}
+</script>
+
+  <link rel="stylesheet" href="https://stories.univ.ai/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://stories.univ.ai/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://stories.univ.ai/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://stories.univ.ai/assets/apple-touch-icon.png">
+
+  
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HM30F33395"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HM30F33395');
+</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  
+  
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+	integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+	integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+	integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+	onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+
+      <!--a href="https://univ.ai">
+            <h2 class="nav-title" style="color: #324bd9">Univ.AI</h2>
+      </a-->
+      <a href="https://stories.univ.ai">
+        <h2 class="nav-title">Stories</h2>
+      </a>
+      <!--span>&nbsp;from&nbsp;</span>
+      <a style="color: #324bd9" href="https://univ.ai">Univ.AI</a-->
+      <ul>
+        
+          
+            <li><a href="https://stories.univ.ai/topics">Topics</a></li>
+          
+            <li><a href="https://stories.univ.ai/about">About</a></li>
+          
+          <li><a style="color: #324bd9" href="https://univ.ai">Univ.AI</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		<span>Written by</span> Rahul Dave
+  		<span>on&nbsp;</span><time datetime="2021-09-02">September  2, 2021</time>
+  	</div>
+  	<h1 class="post-title">Making the @FT Covid Vaccine Visualization</h1>
+  	<div class="post-line"></div>
+  	<ol>
+<li>Two weeks back, in the thread <a href="https://twitter.com/rahuldave/status/1425200284301725708">https://twitter.com/rahuldave/status/1425200284301725708</a>, I talked about the visualization in this image from the financial times (@FT) <a href="https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1">https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1</a> . Here I tackle the production of such an image in @matplotlib .</li>
+</ol>
+<p><img src="/makingthecovidviz/1.png" alt="" /></p>
+<ol start="2">
+<li>
+<p>And in another thread on <strong>Keeping it Simple</strong>: https://twitter.com/rahuldave/status/1427705386434392067, I talked about some of the ins-and-outs of @matplotlib, in the context of removing chartjunk from images. Here we'll use those techniques and some new ones...</p>
+</li>
+<li>
+<p>I used Engauge Digitizer, to extract the data points from the @FT graph. And the built-in OSX utility, Digital Color Meter, to figure the colors used there. The data and the notebook used to produce this thread are available at <a href="https://gist.github.com/rahuldave/df75d3aa73e95e8361b7cdd1663c9868">https://gist.github.com/rahuldave/df75d3aa73e95e8361b7cdd1663c9868</a>.</p>
+</li>
+<li>
+<p>At first I made a simple image of the data, with the red points representing the unvaxed risk, and the blue the vaxed risk. I put a rough black line to compare the danger to an unvaxed 50 year old with that of a vaxed 80 year old.</p>
+</li>
+</ol>
+<p><img src="/makingthecovidviz/4.png" alt="" /></p>
+<ol start="5">
+<li>I then set up a grid like in the original plot, put labels everywhere, and get rid of external tick marks. You can read more about ticks at <a href="https://e2eml.school/matplotlib_ticks.html">https://e2eml.school/matplotlib_ticks.html</a> by @<em>brohrer</em></li>
+</ol>
+<p><img src="/makingthecovidviz/5.png" alt="" /></p>
+<ol start="6">
+<li>I formatted the ticks the way the @FT article did, and removed the spines that make up the plot bounding box as well.</li>
+</ol>
+<p><img src="/makingthecovidviz/6.png" alt="" /></p>
+<ol start="7">
+<li>I replaced the horizontal line comparing ages with an arrow, as in the original image. The arrow is drawn as a Patch, which is an aribitrary 2-D region in matplotlib. Read more about Patches in @<em>brohrer</em>'s course <a href="https://e2eml.school/matplotlib_patches.html">https://e2eml.school/matplotlib_patches.html</a> and in the @matplotlib docs.</li>
+</ol>
+<p><img src="/makingthecovidviz/7.png" alt="" /></p>
+<ol start="8">
+<li>At this point, our image is beginning to take shape. But we have data points for the vaxed case instead of arrows! I'll use Patches to fix this!</li>
+</ol>
+<p><img src="/makingthecovidviz/8.png" alt="" /></p>
+<ol start="9">
+<li>By using patches I have now added an arrow for each age in our dataset! I also add a formatted title. We are getting closer to the final image. I need to annotate the plot and make it have the right color!</li>
+</ol>
+<p><img src="/makingthecovidviz/9.png" alt="" /></p>
+<ol start="10">
+<li>I finally set both the figure and axes color and add 3 annotations. The annotations use arrows, which go from the xytext coordinates to the xy co-ordinates. The annotations serve as legends, and describe the main conclusion.</li>
+</ol>
+<p><img src="/makingthecovidviz/10.png" alt="" /></p>
+<ol start="11">
+<li>
+<p>I'll tackle more visualization stuff in future tweet threads, including the principles of good visualization and how to achieve them with @matplotlib . Follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more!</p>
+</li>
+<li>
+<p>Permalink to thread here: <a href="https://stories.univ.ai/makingthecovidviz/">https://stories.univ.ai/makingthecovidviz/</a>! If you'd like to learn Data Science and AI more formally, you might want to check out my company's programs at
+<a href="https://univ.ai/programs/">https://univ.ai/programs/</a>, and the thread <a href="https://twitter.com/rahuldave/status/1424793241019428864">https://twitter.com/rahuldave/status/1424793241019428864</a> (discounts inside).</p>
+</li>
+</ol>
+
+  </div>
+
+  
+
+	
+
+  <div class="pagination">
+  	<a href="https://stories.univ.ai/centrallimittheorem/" class="left arrow">&#8592;</a>
+		<a href="#" class="top">Top</a>
+		<a href="https://stories.univ.ai/distributions/" class="right arrow">&#8594;</a>
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2021-09-08T13:56:52.890769-04:00">2021</time> Univ.AI. </span>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>Keeping Visualizations Simple with Matplotlib | Stories</title>
+
+
+
+<meta property="og:title" content="Keeping Visualizations Simple with Matplotlib">
+
+
+
+<meta name="author" content="Rahul Dave">
+
+
+<meta property="og:locale" content="en-US">
+
+
+<meta name="description" content="Using matplotlib to remove Chartjunk from a plot">
+<meta property="og:description" content="Using matplotlib to remove Chartjunk from a plot">
+
+
+
+<link rel="canonical" href="https://stories.univ.ai/improvingfigures/">
+<meta property="og:url" content="https://stories.univ.ai/improvingfigures/">
+
+
+
+<meta property="og:site_name" content="Stories" />
+
+
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-08-17T00:00:00+00:00">
+
+
+
+  <link rel="prev" href="https://stories.univ.ai/lawoflargenumbers/">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+
+
+
+  <meta property="twitter:title" content="Keeping Visualizations Simple with Matplotlib">
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Person",
+	  "name":"Rahul Dave",
+  },
+  "description": "Using matplotlib to remove Chartjunk from a plot",
+  "url": "https://stories.univ.ai/improvingfigures/",
+  "@context":"https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Keeping Visualizations Simple with Matplotlib"
+  
+    
+    
+      "datePublished":"2021-08-17T00:00:00+00:00",
+    
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://stories.univ.ai/improvingfigures/"
+    },
+  
+}
+</script>
+
+  <link rel="stylesheet" href="https://stories.univ.ai/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://stories.univ.ai/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://stories.univ.ai/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://stories.univ.ai/assets/apple-touch-icon.png">
+
+  
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HM30F33395"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HM30F33395');
+</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  
+  
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+	integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+	integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+	integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+	onload="renderMathInElement(document.body);"></script>
+
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+
+      <!--a href="https://univ.ai">
+            <h2 class="nav-title" style="color: #324bd9">Univ.AI</h2>
+      </a-->
+      <a href="https://stories.univ.ai">
+        <h2 class="nav-title">Stories</h2>
+      </a>
+      <!--span>&nbsp;from&nbsp;</span>
+      <a style="color: #324bd9" href="https://univ.ai">Univ.AI</a-->
+      <ul>
+        
+          
+            <li><a href="https://stories.univ.ai/topics">Topics</a></li>
+          
+            <li><a href="https://stories.univ.ai/about">About</a></li>
+          
+          <li><a style="color: #324bd9" href="https://univ.ai">Univ.AI</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		<span>Written by</span> Rahul Dave
+  		<span>on&nbsp;</span><time datetime="2021-08-17">August 17, 2021</time>
+  	</div>
+  	<h1 class="post-title">Keeping Visualizations Simple with Matplotlib</h1>
+  	<div class="post-line"></div>
+  	<ol>
+<li>In the thread <a href="https://twitter.com/rahuldave/status/1425200284301725708">https://twitter.com/rahuldave/status/1425200284301725708</a>, I talked about the visualization in this image (from the financial times <a href="https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1">https://www.ft.com/content/0f11b219-0f1b-420e-8188-6651d1e749ff?hcb=1</a>). How might we produce such visualizations?</li>
+</ol>
+<p><img src="/improvingfigures/1.png" alt="" /></p>
+<ol start="2">
+<li>
+<p>We'll tackle that question in another thread, but first we must learn how to make good plots using matplotlib. Which begs the question: what is a good visualization, and how can we make it?</p>
+</li>
+<li>
+<p>Here are some of the best practices for visualization. We'll talk about the second one today: <strong>Keep it simple!</strong>. As Antoine de Saint-Exupéry said: <em>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</em></p>
+</li>
+</ol>
+<p><img src="/improvingfigures/3.png" alt="" /></p>
+<ol start="4">
+<li>As @EdwardTufte has persuasively argued in his books, extraneous visual elements that distract from the message should be removed. For example: tick-marks, frames, sometimes even numbers! Lets us implement this process using matplotlib for a simple example...</li>
+</ol>
+<p><img src="/improvingfigures/4.png" alt="" /></p>
+<ol start="5">
+<li>Here is a dataset on electoral votes and population in all the US states. We'll make a bar chart comparing the electoral votes of different states. You can find the data and the analysis notebook for this thread <a href="https://gist.github.com/rahuldave/2256465a8524453cb2a4630d336f82f7">https://gist.github.com/rahuldave/2256465a8524453cb2a4630d336f82f7</a>.</li>
+</ol>
+<p><img src="/improvingfigures/5.png" alt="" /></p>
+<ol start="6">
+<li>This first snippet illustrates Matplotlib's object-oriented API. We first create a figure object, and in the context of that object, an axes object. Then pandas is used to place a bar plot into those axes. What's <strong>not good</strong>about this plot?</li>
+</ol>
+<p><img src="/improvingfigures/6.png" alt="" /></p>
+<ol start="7">
+<li>In this picture taken from <a href="https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/">https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/</a> by @<em>brohrer</em>, we see that (possibly multiple) Axes sit inside a Figure, and everything else (such as xaxis, yaxis, lines, patches, text, annotations) sits inside the Axes.</li>
+</ol>
+<p><img src="/improvingfigures/7.png" alt="" /></p>
+<ol start="8">
+<li>How can we improve our plot? Do we really need y-axis tick marks with state names labeling them? How about we remove these tick-marks? We do this in matplotlib by setting their length to 0. Note that we are not removing the ticks, but just the marks corresponding to them.</li>
+</ol>
+<p><img src="/improvingfigures/8.png" alt="" /></p>
+<ol start="9">
+<li>Do we really need tick-marks on the x-axis? Why not just write the labels? And move these labels to the top where they are needed more, since the longest bars are there. Finally using a grid at the ticks helps us see the values on each and every bar!</li>
+</ol>
+<p><img src="/improvingfigures/9.png" alt="" /></p>
+<ol start="10">
+<li>Do the spines add anything to our presentation? No! The elements of the figure are strong enough to stand by themselves. Ok, so lets remove the spines...</li>
+</ol>
+<p><img src="/improvingfigures/10.png" alt="" /></p>
+<ol start="11">
+<li>If you want to show more precise distinctions between the states' electoral votes, you want the grid to be more fine grained. So lets have a tick every 5 votes, which translates in our grid visual to a grid line every 5 votes.</li>
+</ol>
+<p><img src="/improvingfigures/11.png" alt="" /></p>
+<ol start="12">
+<li>The grid line labels look entirely redundant. After all, we can count off the grid-lines. So lets get rid of them, and eliminate the clutter. And then, why not show the user the electoral votes for each state at the end of its bar? Dont make the user think!</li>
+</ol>
+<p><img src="/improvingfigures/12.png" alt="" /></p>
+<ol start="13">
+<li>The annotation is done by putting down text at an x of 1 greater than the electoral votes and a y obtained as a index (increasing from top to bottom) from the way matplotlib handles bar plots. We then let matplotlib clean up the layouting of the plot to make it look crisper.</li>
+</ol>
+<p><img src="/improvingfigures/13.png" alt="" /></p>
+<ol start="14">
+<li>Maybe you want to see this image in your slides or website based on the color scheme of your slides or site respectively, rather than having a white background. Then you can <code>savefig</code> the figure as a transparent png. There are multiple other save options as well.</li>
+</ol>
+<p><img src="/improvingfigures/14.png" alt="" /></p>
+<ol start="15">
+<li>
+<p>An incredible source to learn the ins and outs of @matplotlib is <a href="https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/">https://end-to-end-machine-learning.teachable.com/p/navigating-matplotlib-tutorial-how-to/</a> by @<em>brohrer</em> . I teach this stuff as well, as part of the Data Science courses at &lt;Univ.Ai&gt;.</p>
+</li>
+<li>
+<p>This story is permalinked at <a href="https://stories.univ.ai/improvingfigures/">https://stories.univ.ai/improvingfigures/</a>. I'll soon be tweeting on re-producing the @FT vaccination plot mentioned earlier. So do follow me on twitter at @rahuldave and keep an eye on <a href="https://stories.univ.ai">https://stories.univ.ai</a> for more!</p>
+</li>
+</ol>
+
+  </div>
+
+  
+
+	
+
+  <div class="pagination">
+  	<a href="https://stories.univ.ai/distributions/" class="left arrow">&#8592;</a>
+		<a href="#" class="top">Top</a>
+		<a href="https://stories.univ.ai/lawoflargenumbers/" class="right arrow">&#8594;</a>
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2021-09-08T13:56:52.890139-04:00">2021</time> Univ.AI. </span>
+  </footer>
+  
+</body>
+</html>
