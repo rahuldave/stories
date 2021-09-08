@@ -43,7 +43,7 @@ deviation decreases with increasing N. This standard deviation of sample means i
 
 
 
-6. For example, if I take 1000 samples of size 500 each, the 100 means of the coin tosses distribute themselves according to the figure on the left. If I increase the size to 1000 tosses in a sample, we get the tighter distribution on the right.
+6. For example, if I take 1000 samples of size 500 each, the 1000 means of 500 coin tosses each distribute themselves according to the figure on the left. If I increase the size to 1000 tosses in a sample, we get the tighter distribution on the right.
 
 ![](/centrallimittheorem/6.png)
 
@@ -90,14 +90,14 @@ deviation decreases with increasing N. This standard deviation of sample means i
 
 
 
-13. Then s = 9/√9 = 9/3 = 3. Now, if your intervention sample of size 9 had a mean weight of 175, this is less than 2 standard errors out from the population mean, and you cannot claim with a sample size of 9 that your intervention sample actually had a significant effect.
+13. Then s = 9/√9 = 9/3 = 3. Now, if your intervention sample of size 9 had a mean weight of 175, this is less than 2 standard errors out from the population mean, and you cannot claim with a sample size of 9 that your intervention actually had a significant effect.
 
 ![](/centrallimittheorem/13.png)
 
 
 
 
-14. Thus the CLT tells us the sample sizes we need to see significant effects! We'll talk more fun stuff, estimating Pi and its error with the LLN and CLT in future tweet threads. Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more threads!
+14. Thus the CLT hints at the size needed to see significant effects! We'll talk this and more fun stuff, like estimating Pi and its error with the LLN and CLT in future threads. Follow me on twitter at @rahuldave and keep an eye on <https://stories.univ.ai> for more threads!
 
 
 
