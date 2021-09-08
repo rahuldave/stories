@@ -8,7 +8,7 @@ topics = ["Statistics", "MonteCarlo"]
 +++
 
 
-1. Suppose that you lived in a town with a population whose weights had a mean of 180 and a standard deviation of 9. 
+1. Suppose that you lived in a town with a population whose weights had a mean of 180lbs and a standard deviation of 9lbs. 
 Now, some people in this town underwent a weight reduction program, and you want to know if it had a significant effect. Did the "intervention" work?
 
 ![](/centrallimittheorem/1.png)
@@ -29,7 +29,7 @@ go back to the tosses of a fair coin that we talked about here: <https://twitter
 
 
 
-4. This question is answered by the Central Limit Theorem (CLT), which, as it turns out, can also be used to answer the question about
+4. This question is answered by the Central Limit Theorem(CLT), which, it turns out, can also be used to answer the question about
 the significance of the intervention! The CLT starts by recognizing that different samples of the same size N will have slightly different means.
 
 
@@ -76,7 +76,9 @@ deviation decreases with increasing N. This standard deviation of sample means i
 
 
 
-11. The population's weights have a mean of 180 and a standard deviation of 9. Say you have a sample of 100 people in your intervention program. Then s = 9/√100 = 9/10 = 0.9. A set of samples of size 100 would have a mean of sample means of 180 and a standard error of 0.9. Tight!
+11. The population's weights have a mean of 180 and a standard deviation of 9. Say you have a sample of 100 people in your intervention program. Any set of samples of size 100 would have a mean of sample means of 180 and a standard error of  = 9/√100 = 9/10 = 0.9. Tight!
+
+![](/centrallimittheorem/11.png)
 
 
 
